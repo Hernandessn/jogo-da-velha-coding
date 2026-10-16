@@ -18,9 +18,16 @@ tab = [[" ", " ", " "],
 # (Natan: while com opcoes jogar, regras, placar, sair)
 
 # ---------- 4. PARTIDA ----------
+# 4.0 Variaveis de controle da partida (Hernandes)
+vez_x = True          # booleano: True = vez do X, False = vez do O
+simbolo = "X"         # texto: simbolo do jogador atual
+jogadas = 0           # inteiro: jogadas feitas na partida
+linha_escolhida = 0   # indice 0 a 2 da linha jogada
+coluna_escolhida = 0  # indice 0 a 2 da coluna jogada
+
 # 4.1 Reinicio da matriz com for aninhado   (Natan)
-# 4.2 Exibicao do tabuleiro com for aninhado (Voce)
-# 4.3 Leitura da jogada com validacao        (Voce)
+# 4.2 Exibicao do tabuleiro com for aninhado (Hernandes)
+# 4.3 Leitura da jogada com validacao        (Hernandes)
 # 4.4 Vitoria e empate por lacos             (Rony)
 
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
