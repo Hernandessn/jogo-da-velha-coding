@@ -28,7 +28,15 @@ coluna_escolhida = 0  # indice 0 a 2 da coluna jogada
 # 4.1 Reinicio da matriz com for aninhado   (Natan)
 # 4.2 Exibicao do tabuleiro com for aninhado (Hernandes)
 # 4.3 Leitura da jogada com validacao        (Hernandes)
+
 # 4.4 Vitoria e empate por lacos             (Rony)
+# Comeco assumindo que ninguem ganhou ainda
+venceu = False       
+# Vejo as 3 linhas do tabuleiro, uma de cada vez
+for i in range(3):   
+    # Se as 3 casas da linha i tem o simbolo do jogador, ele ganhou
+    if tab[i][0] == simbolo and tab[i][1] == simbolo and tab[i][2] == simbolo:
+        venceu = True
 
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
 # (Rony: total, porcentagens e maior sequencia)
