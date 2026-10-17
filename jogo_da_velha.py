@@ -37,6 +37,9 @@ for i in range(3):
     # Se as 3 casas da linha i tem o simbolo do jogador, ele ganhou
     if tab[i][0] == simbolo and tab[i][1] == simbolo and tab[i][2] == simbolo:
         venceu = True
+     # Coluna i: aqui o i fica na segunda posicao, e a linha varia de 0 a 2
+    if tab[0][i] == simbolo and tab[1][i] == simbolo and tab[2][i] == simbolo:
+        venceu = True  
 
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
 # (Rony: total, porcentagens e maior sequencia)
