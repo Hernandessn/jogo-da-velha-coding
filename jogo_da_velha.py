@@ -26,8 +26,14 @@ while sair == False:
 
     opcao = input("Escolha uma opcao: ")
 
+
     if opcao == "1":
         print("(partida entra aqui)")
+    elif opcao == "2":
+        print("- Dois jogadores (X e O) alternam jogadas em um tabuleiro 3x3.")
+        print("- Informe linha e coluna (1 a 3) de uma casa vazia.")
+        print("- Vence quem completar linha, coluna ou diagonal.")
+        print("- Tabuleiro cheio sem vencedor: empate.")
     elif opcao == "4":
         sair = True
     else:
