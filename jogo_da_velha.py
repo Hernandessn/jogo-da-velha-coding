@@ -15,7 +15,24 @@ tab = [[" ", " ", " "],
 # (Natan e Rony declaram aqui os contadores)
 
 # ---------- 3. MENU PRINCIPAL ----------
-# (Natan: while com opcoes jogar, regras, placar, sair)
+sair = False
+while sair == False:
+    print("")
+    print("===== JOGO DA VELHA =====")
+    print("1 - Jogar")
+    print("2 - Ver regras")
+    print("3 - Ver placar")
+    print("4 - Sair")
+
+    opcao = input("Escolha uma opcao: ")
+
+    if opcao == "1":
+        print("(partida entra aqui)")
+    elif opcao == "4":
+        sair = True
+    else:
+        print("Opcao invalida! Digite 1, 2, 3 ou 4.")
+
 
 # ---------- 4. PARTIDA ----------
 # 4.0 Variaveis de controle da partida (Hernandes)
