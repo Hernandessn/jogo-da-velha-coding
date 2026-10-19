@@ -50,6 +50,16 @@ coluna_escolhida = 0  # indice 0 a 2 da coluna jogada
 
 # 4.1 Reinicio da matriz com for aninhado   (Natan)
 # 4.2 Exibicao do tabuleiro com for aninhado (Hernandes)
+print("     1   2   3")
+for i in range(3):                      # i percorre as linhas
+    texto_linha = " " + str(i + 1) + "  "
+    for j in range(3):                  # j percorre as colunas da linha i
+        texto_linha = texto_linha + " " + tab[i][j] + " "
+        if j < 2:
+            texto_linha = texto_linha + "|"
+    print(texto_linha)
+    if i < 2:
+        print("    ---+---+---")
 # 4.3 Leitura da jogada com validacao        (Hernandes)
 
 # 4.4 Vitoria e empate por lacos             (Rony)
