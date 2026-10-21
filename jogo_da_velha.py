@@ -61,7 +61,15 @@ for i in range(3):                      # i percorre as linhas
     if i < 2:
         print("    ---+---+---")
 # 4.3 Leitura da jogada com validacao        (Hernandes)
-
+valida = False
+while valida == False:
+    entrada = input("Linha (1 a 3): ")      # entrada e texto
+    for k in range(1, 4):                   # opcoes validas: "1", "2", "3"
+        if entrada == str(k):
+            valida = True
+            linha_escolhida = k - 1         # indice da matriz
+    if valida == False:
+        print("Entrada invalida! Digite um numero de 1 a 3.")
 # 4.4 Vitoria e empate por lacos             (Rony)
 # Comeco assumindo que ninguem ganhou ainda
 venceu = False       
