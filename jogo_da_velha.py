@@ -97,5 +97,19 @@ for i in range(3):
 if cont_principal == 3 or cont_secundaria == 3:
     venceu = True 
 
+# Conto quantas casas ainda estao vazias
+# Comeco supondo que nao ha nenhuma casa vazia
+vazias = 0
+# Percorro as 3 linhas do tabuleiro
+for i in range(3):
+    # Para cada linha i, olho as 3 colunas j
+    # Em cada linha, percorro as 3 colunas
+    for j in range(3):
+        # Se a casa esta vazia, somo 1 no contador
+        if tab[i][j] == " ":
+            vazias = vazias + 1
+# Se nao sobrou casa vazia e ninguem ganhou, deu empate
+if vazias == 0 and venceu == False:
+    print("Deu empate!")
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
 # (Rony: total, porcentagens e maior sequencia)
