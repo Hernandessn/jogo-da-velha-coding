@@ -53,6 +53,9 @@ linha_escolhida = 0   # indice 0 a 2 da linha jogada
 coluna_escolhida = 0  # indice 0 a 2 da coluna jogada
 
 # 4.1 Reinicio da matriz com for aninhado   (Natan)
+for i in range(3):
+    for j in range(3):
+        tab[i][j] = " "
 # 4.2 Exibicao do tabuleiro com for aninhado (Hernandes)
 print("     1   2   3")
 for i in range(3):                      # i percorre as linhas
