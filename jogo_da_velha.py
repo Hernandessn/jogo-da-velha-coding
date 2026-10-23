@@ -65,15 +65,39 @@ for i in range(3):                      # i percorre as linhas
     if i < 2:
         print("    ---+---+---")
 # 4.3 Leitura da jogada com validacao        (Hernandes)
-valida = False
-while valida == False:
-    entrada = input("Linha (1 a 3): ")      # entrada e texto
-    for k in range(1, 4):                   # opcoes validas: "1", "2", "3"
-        if entrada == str(k):
-            valida = True
-            linha_escolhida = k - 1         # indice da matriz
-    if valida == False:
-        print("Entrada invalida! Digite um numero de 1 a 3.")
+casa_livre = False
+while casa_livre == False:
+    # --- leitura da linha ---
+    valida = False
+    while valida == False:
+        entrada = input("Linha (1 a 3): ")      # entrada e texto
+        for k in range(1, 4):                   # opcoes validas: "1", "2", "3"
+            if entrada == str(k):
+                valida = True
+                linha_escolhida = k - 1         # indice da matriz
+        if valida == False:
+            print("Entrada invalida! Digite um numero de 1 a 3.")
+
+    # --- leitura da coluna ---
+    valida = False                              # zera antes de ler a coluna
+    while valida == False:
+        entrada = input("Coluna (1 a 3): ")
+        for k in range(1, 4):
+            if entrada == str(k):
+                valida = True
+                coluna_escolhida = k - 1
+        if valida == False:
+            print("Entrada invalida! Digite um numero de 1 a 3.")
+
+    # --- casa livre ou ocupada ---
+    if tab[linha_escolhida][coluna_escolhida] == " ":
+        casa_livre = True
+    else:
+        print("Casa ocupada! Escolha outra posicao.")
+
+# grava o simbolo na casa escolhida e conta a jogada
+tab[linha_escolhida][coluna_escolhida] = simbolo
+jogadas = jogadas + 1
 # 4.4 Vitoria e empate por lacos             (Rony)
 
 # Comeco assumindo que ninguem ganhou ainda
