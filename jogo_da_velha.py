@@ -12,7 +12,9 @@ tab = [[" ", " ", " "],
        [" ", " ", " "]]
 
 # ---------- 2. PLACAR E ESTATISTICAS (variaveis) ----------
-# (Natan e Rony declaram aqui os contadores)
+vit_x = 0
+vit_o = 0
+empates = 0
 
 # ---------- 3. MENU PRINCIPAL ----------
 sair = False
@@ -34,6 +36,8 @@ while sair == False:
         print("- Informe linha e coluna (1 a 3) de uma casa vazia.")
         print("- Vence quem completar linha, coluna ou diagonal.")
         print("- Tabuleiro cheio sem vencedor: empate.")
+    elif opcao == "3":
+        print("PLACAR -> X:", vit_x, "| O:", vit_o, "| Empates:", empates)
     elif opcao == "4":
         sair = True
     else:
