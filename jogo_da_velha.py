@@ -16,6 +16,13 @@ vit_x = 0
 vit_o = 0
 empates = 0
 
+# Estatisticas da sessao (Rony)
+total_partidas = 0
+seq_x = 0
+seq_o = 0
+maior_seq_x = 0
+maior_seq_o = 0
+
 # ---------- 3. MENU PRINCIPAL ----------
 sair = False
 while sair == False:
