@@ -47,6 +47,14 @@ while sair == False:
         print("PLACAR -> X:", vit_x, "| O:", vit_o, "| Empates:", empates)
     elif opcao == "4":
         sair = True
+        # Ao sair, mostro as estatisticas da sessao
+        if total_partidas > 0:
+            # Porcentagem de vitorias de X com uma casa decimal (sem usar round)
+            pct_x = int(vit_x / total_partidas * 1000 + 0.5) / 10
+            print("Porcentagem de vitorias de X:", str(pct_x) + "%")
+        else:
+            print("Nenhuma partida jogada.")
+        print("Maior sequencia de X:", maior_seq_x)
     else:
         print("Opcao invalida! Digite 1, 2, 3 ou 4.")
 
