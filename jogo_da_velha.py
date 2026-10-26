@@ -171,5 +171,24 @@ if venceu == False and vazias > 0:
     else:
         simbolo = "O"
 
+
+
+# Fim da partida: atualizo as estatisticas
+if venceu == True or vazias == 0:
+    total_partidas = total_partidas + 1
+    if venceu == True and simbolo == "X":
+        seq_x = seq_x + 1
+        seq_o = 0
+        if seq_x > maior_seq_x:
+            maior_seq_x = seq_x
+    elif venceu == True and simbolo == "O":
+        seq_o = seq_o + 1
+        seq_x = 0
+        if seq_o > maior_seq_o:
+            maior_seq_o = seq_o
+    else:
+        seq_x = 0
+        seq_o = 0
+
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
 # (Rony: total, porcentagens e maior sequencia)
