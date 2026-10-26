@@ -160,5 +160,16 @@ for i in range(3):
 # Se nao sobrou casa vazia e ninguem ganhou, deu empate
 if vazias == 0 and venceu == False:
     print("Deu empate!")
+
+# Se o jogo continua, passo a vez para o outro jogador
+if venceu == False and vazias > 0:
+    # Inverto a vez: True vira False e False vira True
+    vez_x = not vez_x
+    # Atualizo o simbolo de acordo com a vez
+    if vez_x == True:
+        simbolo = "X"
+    else:
+        simbolo = "O"
+
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
 # (Rony: total, porcentagens e maior sequencia)
