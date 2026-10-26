@@ -56,47 +56,47 @@ coluna_escolhida = 0  # indice 0 a 2 da coluna jogada
 for i in range(3):
     for j in range(3):
         tab[i][j] = " "
+melhor_de = 0
+while melhor_de == 0:
+    escolha = input("Serie melhor de 3 ou melhor de 5? (3 ou 5): ")
+    if escolha == "3":
+        melhor_de = 3
+    elif escolha == "5":
+        melhor_de = 5
+    else:
+        print("Entrada invalida! Digite 3 ou 5.")
+vitorias_necessarias = melhor_de // 2 + 1   # 2 na de 3, 3 na de 5
+
 # 4.2 Exibicao do tabuleiro com for aninhado (Hernandes)
-# Cabecalho com os numeros das colunas, para o jogador se orientar
 print("     1   2   3")
-# Laco de fora: i percorre as LINHAS da matriz (0, 1 e 2)
-for i in range(3):
-    # Comeca o texto da linha com o numero dela (i + 1, pois o jogador conta a partir de 1)
+for i in range(3):                      # i percorre as linhas
     texto_linha = " " + str(i + 1) + "  "
-    # Laco de dentro: para cada linha i, j percorre as COLUNAS (0, 1 e 2).
-    # tab[i][j] e o conteudo da casa na linha i, coluna j
-    for j in range(3):
+    for j in range(3):                  # j percorre as colunas da linha i
         texto_linha = texto_linha + " " + tab[i][j] + " "
-        # Barra vertical so ENTRE as casas, nao depois da ultima coluna
         if j < 2:
             texto_linha = texto_linha + "|"
-    # Passadas as 3 colunas, imprime a linha ja montada
     print(texto_linha)
-    # Separador horizontal so ENTRE as linhas, nao depois da ultima
     if i < 2:
         print("    ---+---+---")
 # 4.3 Leitura da jogada com validacao        (Hernandes)
-# Repete linha + coluna ate o jogador escolher uma casa livre
 casa_livre = False
 while casa_livre == False:
     # --- leitura da linha ---
-    valida = False                              # so vira True com entrada "1", "2" ou "3"
+    valida = False
     while valida == False:
         entrada = input("Linha (1 a 3): ")      # entrada e texto
-        # k NAO e indice da matriz: e cada opcao que o jogador pode digitar (1, 2, 3).
-        # O for compara o texto digitado com str(k) para cada opcao
-        for k in range(1, 4):
+        for k in range(1, 4):                   # opcoes validas: "1", "2", "3"
             if entrada == str(k):
                 valida = True
-                linha_escolhida = k - 1         # converte 1..3 para indice 0..2
+                linha_escolhida = k - 1         # indice da matriz
         if valida == False:
             print("Entrada invalida! Digite um numero de 1 a 3.")
 
     # --- leitura da coluna ---
-    valida = False                              # zera antes de ler a coluna, senao ela seria pulada
+    valida = False                              # zera antes de ler a coluna
     while valida == False:
         entrada = input("Coluna (1 a 3): ")
-        for k in range(1, 4):                   # mesma validacao da linha
+        for k in range(1, 4):
             if entrada == str(k):
                 valida = True
                 coluna_escolhida = k - 1
@@ -153,16 +153,5 @@ for i in range(3):
 # Se nao sobrou casa vazia e ninguem ganhou, deu empate
 if vazias == 0 and venceu == False:
     print("Deu empate!")
-
-# Se o jogo continua, passo a vez para o outro jogador
-if venceu == False and vazias > 0:
-    # Inverto a vez: True vira False e False vira True
-    vez_x = not vez_x
-    # Atualizo o simbolo de acordo com a vez
-    if vez_x == True:
-        simbolo = "X"
-    else:
-        simbolo = "O"
-
 # ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
 # (Rony: total, porcentagens e maior sequencia)
