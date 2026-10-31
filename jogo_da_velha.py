@@ -60,6 +60,16 @@ while sair == False:
             else:
                 print("Entrada invalida! Digite 3 ou 5.")
         vitorias_necessarias = melhor_de // 2 + 1   # 2 na de 3, 3 na de 5
+        serie_x = 0
+serie_o = 0
+while serie_x < vitorias_necessarias and serie_o < vitorias_necessarias:
+    # ... uma partida: reinicia a matriz e joga ...
+    # ao fim: serie_x ou serie_o recebe +1 (empate nao conta)
+    pass
+if serie_x == vitorias_necessarias:
+    print("CAMPEAO DA SERIE: X (", serie_x, "x", serie_o, ")")
+else:
+    print("CAMPEAO DA SERIE: O (", serie_o, "x", serie_x, ")")
  
         # Repete exibicao, leitura e checagem de vitoria ate a partida acabar
         while fim_partida == False:
