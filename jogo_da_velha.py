@@ -252,7 +252,7 @@ while sair == False:
         print("Vitorias de O:", vit_o)
         print("Empates:", empates)
         if total_partidas > 0:
-            # Porcentagem com 1 casa decimal, sem usar round()
+            # Porcentagem com 1 casa decimal, sem funcao de arredondamento
             pct_x = int(vit_x / total_partidas * 1000 + 0.5) / 10
             pct_o = int(vit_o / total_partidas * 1000 + 0.5) / 10
             print("Porcentagem de vitorias de X:", str(pct_x) + "%")
@@ -263,7 +263,3 @@ while sair == False:
         print("Maior sequencia de vitorias de O:", maior_seq_o)
     else:
         print("Opcao invalida! Digite 1, 2, 3 ou 4.")
- 
- 
-# ---------- 5. ESTATISTICAS DA SESSAO (ao sair) ----------
-# (Rony: total, porcentagens e maior sequencia)
