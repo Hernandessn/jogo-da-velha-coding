@@ -31,4 +31,4 @@ Na pasta do projeto, rode: `python jogo_da_velha.py`
 
 ## Links
 
-- Vídeo: (colocar o link não listado)
+- Vídeo: [https://youtu.be/oJs9pqzRMOk](https://youtu.be/oJs9pqzRMOk)
